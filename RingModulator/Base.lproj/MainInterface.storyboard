@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Unit View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AudioUnitViewController" customModule="RingModulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yW4-jg-NwI">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="derbyshire-board" translatesAutoresizingMaskIntoConstraints="NO" id="jgC-O8-qdN">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-4P-C83" userLabel="centering view">
+                                <rect key="frame" x="0.0" y="146" width="667" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulation Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crv-Nc-0W5">
+                                        <rect key="frame" x="165.5" y="0.0" width="337.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="22" minValue="15" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="fWb-qg-zeZ">
+                                        <rect key="frame" x="26" y="53" width="615" height="31"/>
+                                        <connections>
+                                            <action selector="handleFrequencySliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sSK-pZ-5d0"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Crv-Nc-0W5" firstAttribute="top" secondItem="i8N-4P-C83" secondAttribute="top" id="1hv-Ls-q0E"/>
+                                    <constraint firstItem="fWb-qg-zeZ" firstAttribute="leading" secondItem="i8N-4P-C83" secondAttribute="leadingMargin" constant="20" id="2cE-jh-tWG"/>
+                                    <constraint firstItem="Crv-Nc-0W5" firstAttribute="centerX" secondItem="i8N-4P-C83" secondAttribute="centerX" id="41w-lJ-39h"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="fWb-qg-zeZ" secondAttribute="trailing" constant="20" id="X2h-3T-u7G"/>
+                                    <constraint firstItem="fWb-qg-zeZ" firstAttribute="top" secondItem="Crv-Nc-0W5" secondAttribute="bottom" constant="20" id="qmX-iu-986"/>
+                                    <constraint firstAttribute="bottom" secondItem="fWb-qg-zeZ" secondAttribute="bottom" id="x3u-Rc-r3e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jgC-O8-qdN" secondAttribute="trailing" id="8DD-VE-ja2"/>
+                            <constraint firstItem="jgC-O8-qdN" firstAttribute="leading" secondItem="yW4-jg-NwI" secondAttribute="leading" id="Ftx-pO-SYk"/>
+                            <constraint firstItem="jgC-O8-qdN" firstAttribute="leading" secondItem="yW4-jg-NwI" secondAttribute="leading" id="HXO-py-ADu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jgC-O8-qdN" secondAttribute="bottom" id="JSX-oy-Zuw"/>
+                            <constraint firstItem="jgC-O8-qdN" firstAttribute="top" secondItem="yW4-jg-NwI" secondAttribute="top" id="MFp-rC-UBs"/>
+                            <constraint firstItem="i8N-4P-C83" firstAttribute="centerY" secondItem="yW4-jg-NwI" secondAttribute="centerY" id="Pm1-tv-3Tg"/>
+                            <constraint firstAttribute="trailing" secondItem="i8N-4P-C83" secondAttribute="trailing" id="m41-0V-fAi"/>
+                            <constraint firstAttribute="trailing" secondItem="jgC-O8-qdN" secondAttribute="trailing" id="mww-e9-JtU"/>
+                            <constraint firstItem="i8N-4P-C83" firstAttribute="leading" secondItem="yW4-jg-NwI" secondAttribute="leading" id="yxd-xh-hBx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frequencySlider" destination="fWb-qg-zeZ" id="0on-N6-AKM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="derbyshire-board" width="1600" height="720"/>
+    </resources>
+</document>

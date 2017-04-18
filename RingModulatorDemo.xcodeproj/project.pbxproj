@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D20B3F1EA669CF0064F784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D20B3E1EA669CF0064F784 /* AppDelegate.swift */; };
+		01D20B411EA669CF0064F784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D20B401EA669CF0064F784 /* ViewController.swift */; };
+		01D20B441EA669CF0064F784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D20B421EA669CF0064F784 /* Main.storyboard */; };
+		01D20B461EA669CF0064F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D20B451EA669CF0064F784 /* Assets.xcassets */; };
+		01D20B491EA669CF0064F784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D20B471EA669CF0064F784 /* LaunchScreen.storyboard */; };
+		01D20B581EA66AC10064F784 /* RingModulatorAudioUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D20B571EA66AC10064F784 /* RingModulatorAudioUnit.m */; };
+		01D20B5A1EA66AC10064F784 /* AudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D20B591EA66AC10064F784 /* AudioUnitViewController.swift */; };
+		01D20B5D1EA66AC10064F784 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D20B5B1EA66AC10064F784 /* MainInterface.storyboard */; };
+		01D20B621EA66AC10064F784 /* RingModulator.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 01D20B541EA66AC00064F784 /* RingModulator.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		01D20B681EA66D540064F784 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01D20B671EA66D540064F784 /* Media.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		01D20B601EA66AC10064F784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D20B331EA669CE0064F784 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D20B531EA66AC00064F784;
+			remoteInfo = RingModulator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01D20B661EA66AC10064F784 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01D20B621EA66AC10064F784 /* RingModulator.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01D20B3B1EA669CF0064F784 /* RingModulatorDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RingModulatorDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D20B3E1EA669CF0064F784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01D20B401EA669CF0064F784 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01D20B431EA669CF0064F784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01D20B451EA669CF0064F784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01D20B481EA669CF0064F784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01D20B4A1EA669CF0064F784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D20B541EA66AC00064F784 /* RingModulator.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RingModulator.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D20B561EA66AC10064F784 /* RingModulatorAudioUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RingModulatorAudioUnit.h; sourceTree = "<group>"; };
+		01D20B571EA66AC10064F784 /* RingModulatorAudioUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RingModulatorAudioUnit.m; sourceTree = "<group>"; };
+		01D20B591EA66AC10064F784 /* AudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioUnitViewController.swift; sourceTree = "<group>"; };
+		01D20B5C1EA66AC10064F784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		01D20B5E1EA66AC10064F784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01D20B5F1EA66AC10064F784 /* RingModulator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RingModulator-Bridging-Header.h"; sourceTree = "<group>"; };
+		01D20B671EA66D540064F784 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01D20B381EA669CF0064F784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D20B511EA66AC00064F784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01D20B321EA669CE0064F784 = {
+			isa = PBXGroup;
+			children = (
+				01D20B3D1EA669CF0064F784 /* RingModulatorDemo */,
+				01D20B551EA66AC10064F784 /* RingModulator */,
+				01D20B3C1EA669CF0064F784 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01D20B3C1EA669CF0064F784 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01D20B3B1EA669CF0064F784 /* RingModulatorDemo.app */,
+				01D20B541EA66AC00064F784 /* RingModulator.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01D20B3D1EA669CF0064F784 /* RingModulatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				01D20B3E1EA669CF0064F784 /* AppDelegate.swift */,
+				01D20B401EA669CF0064F784 /* ViewController.swift */,
+				01D20B421EA669CF0064F784 /* Main.storyboard */,
+				01D20B451EA669CF0064F784 /* Assets.xcassets */,
+				01D20B471EA669CF0064F784 /* LaunchScreen.storyboard */,
+				01D20B4A1EA669CF0064F784 /* Info.plist */,
+			);
+			path = RingModulatorDemo;
+			sourceTree = "<group>";
+		};
+		01D20B551EA66AC10064F784 /* RingModulator */ = {
+			isa = PBXGroup;
+			children = (
+				01D20B561EA66AC10064F784 /* RingModulatorAudioUnit.h */,
+				01D20B571EA66AC10064F784 /* RingModulatorAudioUnit.m */,
+				01D20B591EA66AC10064F784 /* AudioUnitViewController.swift */,
+				01D20B5B1EA66AC10064F784 /* MainInterface.storyboard */,
+				01D20B5E1EA66AC10064F784 /* Info.plist */,
+				01D20B5F1EA66AC10064F784 /* RingModulator-Bridging-Header.h */,
+				01D20B671EA66D540064F784 /* Media.xcassets */,
+			);
+			path = RingModulator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01D20B3A1EA669CF0064F784 /* RingModulatorDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D20B4D1EA669CF0064F784 /* Build configuration list for PBXNativeTarget "RingModulatorDemo" */;
+			buildPhases = (
+				01D20B371EA669CF0064F784 /* Sources */,
+				01D20B381EA669CF0064F784 /* Frameworks */,
+				01D20B391EA669CF0064F784 /* Resources */,
+				01D20B661EA66AC10064F784 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				01D20B611EA66AC10064F784 /* PBXTargetDependency */,
+			);
+			name = RingModulatorDemo;
+			productName = RingModulatorDemo;
+			productReference = 01D20B3B1EA669CF0064F784 /* RingModulatorDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		01D20B531EA66AC00064F784 /* RingModulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D20B631EA66AC10064F784 /* Build configuration list for PBXNativeTarget "RingModulator" */;
+			buildPhases = (
+				01D20B501EA66AC00064F784 /* Sources */,
+				01D20B511EA66AC00064F784 /* Frameworks */,
+				01D20B521EA66AC00064F784 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RingModulator;
+			productName = RingModulator;
+			productReference = 01D20B541EA66AC00064F784 /* RingModulator.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01D20B331EA669CE0064F784 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Subsequently & Furthermore, Inc";
+				TargetAttributes = {
+					01D20B3A1EA669CF0064F784 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = F679G67SNR;
+						ProvisioningStyle = Automatic;
+					};
+					01D20B531EA66AC00064F784 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = F679G67SNR;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 01D20B361EA669CE0064F784 /* Build configuration list for PBXProject "RingModulatorDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01D20B321EA669CE0064F784;
+			productRefGroup = 01D20B3C1EA669CF0064F784 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01D20B3A1EA669CF0064F784 /* RingModulatorDemo */,
+				01D20B531EA66AC00064F784 /* RingModulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01D20B391EA669CF0064F784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D20B491EA669CF0064F784 /* LaunchScreen.storyboard in Resources */,
+				01D20B461EA669CF0064F784 /* Assets.xcassets in Resources */,
+				01D20B441EA669CF0064F784 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D20B521EA66AC00064F784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D20B681EA66D540064F784 /* Media.xcassets in Resources */,
+				01D20B5D1EA66AC10064F784 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01D20B371EA669CF0064F784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D20B411EA669CF0064F784 /* ViewController.swift in Sources */,
+				01D20B3F1EA669CF0064F784 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D20B501EA66AC00064F784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D20B581EA66AC10064F784 /* RingModulatorAudioUnit.m in Sources */,
+				01D20B5A1EA66AC10064F784 /* AudioUnitViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01D20B611EA66AC10064F784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D20B531EA66AC00064F784 /* RingModulator */;
+			targetProxy = 01D20B601EA66AC10064F784 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		01D20B421EA669CF0064F784 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D20B431EA669CF0064F784 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01D20B471EA669CF0064F784 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D20B481EA669CF0064F784 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		01D20B5B1EA66AC10064F784 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01D20B5C1EA66AC10064F784 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01D20B4B1EA669CF0064F784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		01D20B4C1EA669CF0064F784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01D20B4E1EA669CF0064F784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F679G67SNR;
+				INFOPLIST_FILE = RingModulatorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.subfurther.conferences.RingModulatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		01D20B4F1EA669CF0064F784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F679G67SNR;
+				INFOPLIST_FILE = RingModulatorDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.subfurther.conferences.RingModulatorDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		01D20B641EA66AC10064F784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = F679G67SNR;
+				INFOPLIST_FILE = RingModulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.subfurther.conferences.RingModulatorDemo.RingModulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RingModulator/RingModulator-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		01D20B651EA66AC10064F784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = F679G67SNR;
+				INFOPLIST_FILE = RingModulator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.subfurther.conferences.RingModulatorDemo.RingModulator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RingModulator/RingModulator-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01D20B361EA669CE0064F784 /* Build configuration list for PBXProject "RingModulatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D20B4B1EA669CF0064F784 /* Debug */,
+				01D20B4C1EA669CF0064F784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D20B4D1EA669CF0064F784 /* Build configuration list for PBXNativeTarget "RingModulatorDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D20B4E1EA669CF0064F784 /* Debug */,
+				01D20B4F1EA669CF0064F784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		01D20B631EA66AC10064F784 /* Build configuration list for PBXNativeTarget "RingModulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D20B641EA66AC10064F784 /* Debug */,
+				01D20B651EA66AC10064F784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01D20B331EA669CE0064F784 /* Project object */;
+}
