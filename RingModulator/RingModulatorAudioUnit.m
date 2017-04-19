@@ -178,29 +178,34 @@ AudioBufferList renderABL;
 - (AUInternalRenderBlock)internalRenderBlock {
     // Capture in locals to avoid Obj-C member lookups. If "self" is captured in render, we're doing it wrong. See sample code.
     
+    AUValue *frequencyCapture = &frequency;
+    AudioStreamBasicDescription *asbdCapture = &asbd;
+    __block UInt64 *totalFramesCapture = &totalFrames;
+    AudioBufferList *renderABLCapture = &renderABL;
+    
     return ^AUAudioUnitStatus(AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *timestamp, AVAudioFrameCount frameCount, NSInteger outputBusNumber, AudioBufferList *outputData, const AURenderEvent *realtimeEventListHead, AURenderPullInputBlock pullInputBlock) {
         // Do event handling and signal processing here.
         
         // cheat: use logged asbd's format from above (float + packed + noninterleaved)
-        if (asbd.mFormatID != kAudioFormatLinearPCM || asbd.mFormatFlags != 0x29 || asbd.mChannelsPerFrame != 2) {
+        if (asbdCapture->mFormatID != kAudioFormatLinearPCM || asbdCapture->mFormatFlags != 0x29 || asbdCapture->mChannelsPerFrame != 2) {
             return -999;
         }
         
         // pull in samples to filter
-        pullInputBlock(actionFlags, timestamp, frameCount, 0, &renderABL);
+        pullInputBlock(actionFlags, timestamp, frameCount, 0, renderABLCapture);
         
+        // copy samples from ABL, apply filter, write to outputData
         size_t sampleSize = sizeof(Float32);
         for (int frame = 0; frame < frameCount; frame++) {
-            totalFrames++;
+            *totalFramesCapture += 1;
             
-            for (int renderBuf = 0; renderBuf < renderABL.mNumberBuffers; renderBuf++) {
-                Float32 *sample = renderABL.mBuffers[renderBuf].mData + (frame * asbd.mBytesPerFrame);
+            for (int renderBuf = 0; renderBuf < renderABLCapture->mNumberBuffers; renderBuf++) {
+                Float32 *sample = renderABLCapture->mBuffers[renderBuf].mData + (frame * asbdCapture->mBytesPerFrame);
                 // apply modulation
-                // ?? - should this take the absf() of the sinf(), so we don't invert waves?
-                Float32 time = totalFrames / asbd.mSampleRate;
-                *sample = *sample * sinf(M_PI * 2 * time * frequency);
+                Float32 time = totalFrames / asbdCapture->mSampleRate;
+                *sample = *sample * fabs(sinf(M_PI * 2 * time * *frequencyCapture));
                 
-                memcpy(outputData->mBuffers[renderBuf].mData + (frame * asbd.mBytesPerFrame),
+                memcpy(outputData->mBuffers[renderBuf].mData + (frame * asbdCapture->mBytesPerFrame),
                        sample,
                        sampleSize);
             }
